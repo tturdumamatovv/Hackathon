@@ -1,0 +1,1 @@
+[{"id": 1, "brand": "BMW", "model": "E38", "year_of_release": 1994, "engine_capacity": 2.8, "color": "Black", "type": "sedan", "mileage": 5000, "price": 9999.9}, {"id": 2, "brand": "BMW", "model": "E39", "year_of_release": 1999, "engine_capacity": 2.8, "color": "White", "type": "sedan", "mileage": 5000, "price": 1234.5}]
