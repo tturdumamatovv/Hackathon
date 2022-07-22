@@ -89,8 +89,6 @@ with open(Car.FILE, 'w') as file:
 
 car = Car('BMW', 'E38', 1994, 2.8, 'Black', 'sedan', 5000, 9999.9)
 car2 = Car('BMW', 'E39', 1999, 2.8, 'White', 'sedan', 5000, 1234.5)
-print(car.retrieve_data(1))
-print(Car.get_data())
 
 
 print('Все машины:\n', Car.get_data())
