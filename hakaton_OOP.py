@@ -2,16 +2,20 @@ import json
 class Car:
     FILE = 'j_file.json'
     id = 0 
-    def __init__(self, brand, model, year_of_release, engine_capacity, color, type_, mileage, price):
-        self.brand = brand
-        self.model = model
-        self.year_of_release = year_of_release
-        self.engine_capacity = engine_capacity
-        self.color = color
-        self.type_ = type_
-        self.mileage = mileage
-        self.price = price
-        self.send_car_to_json()
+    def __init__(self):
+        try:
+            self.brand = input('Car brand : ')
+            self.model = input('Car model: ')
+            self.year_of_release = int(input('Release date: '))
+            self.engine_capacity = float(input('Engine capacity: '))
+            self.color = input('Car color: ')
+            self.type_ = input('Body type: ')
+            self.mileage = int(input('Car mileage: '))
+            self.price = int(input('Price of the car: '))
+            self.send_car_to_json()
+        except:
+            print('Вы ввели некоректные данные')
+            Car()
 
     @classmethod
     def get_id(cls):
@@ -86,13 +90,14 @@ with open(Car.FILE, 'w') as file:
     json.dump([], file)
 
 
-car = Car('BMW', 'E38', 1994, 2.8, 'Black', 'sedan', 5000, 9999.9)
-car2 = Car('BMW', 'E39', 1999, 2.8, 'White', 'sedan', 5000, 1234.5)
+car = Car()
+# car = Car('BMW', 'E38', 1994, 2.8, 'Black', 'sedan', 5000, 9999.9)
+# car2 = Car('BMW', 'E39', 1999, 2.8, 'White', 'sedan', 5000, 1234.5)
 
-print('Все машины:\n', Car.get_data())
-print(Car.retrieve_data(1))
-print(Car.update_data(2, model='E34'))
-print(Car.delete_car(1))
-print('Все машины:\n', Car.get_data())
+# print('Все машины:\n', Car.get_data())
+# print(Car.retrieve_data(1))
+# print(Car.update_data(2, model='E34'))
+# print(Car.delete_car(1))
+# print('Все машины:\n', Car.get_data())
 
         
