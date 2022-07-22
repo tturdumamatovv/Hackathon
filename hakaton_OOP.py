@@ -91,7 +91,7 @@ car2 = Car('BMW', 'E39', 1999, 2.8, 'White', 'sedan', 5000, 1234.5)
 
 print('Все машины:\n', Car.get_data())
 print(Car.retrieve_data(1))
-print(Car.update_data(1, model='E34'))
+print(Car.update_data(2, model='E34'))
 print(Car.delete_car(1))
 print('Все машины:\n', Car.get_data())
 
